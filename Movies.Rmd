@@ -1,7 +1,7 @@
 ---
 title: "Exploratory Data Analysis of IMDB Movies Data-set"
 author: "Aditya Diwane"
-date: "10/10/2020"
+date: "10/10/2020"  
 knit: (function(input_file, encoding) {
   out_dir <- 'docs';
   rmarkdown::render(input_file,
@@ -22,7 +22,7 @@ knitr::opts_chunk$set(echo = TRUE)
 3. **Insights**: Some very interesting insights were obtained from this analysis:
 
 - Drama, Comedy and Thriller are the top genres. The frequency of movies decreases exponentially.
-- US has the most thriving movie industry, and movies are being produced since the early-mid nineties. Japan, Italy, germany and - - - France being only other countries which produced significant number of movies before 1980s.
+- US has the most thriving movie industry, and movies are being produced since the early-mid nineties. Japan, Italy, germany and France being only other countries which produced significant number of movies before 1980s.
 - India has significantly higher average movie budget (~100 M$) than other countries (However, average is not robust to outliers)
 - New Zealand tops the average movie revenue (~90 M$), and is significantly higher than the second highest Taiwan.
 - English is the language in which most movies are made.
