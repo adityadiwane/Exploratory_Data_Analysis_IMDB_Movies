@@ -2,6 +2,11 @@
 title: "Synopsis"
 author: "Aditya Diwane"
 date: "10/10/2020"
+knit: (function(input_file, encoding) {
+  out_dir <- 'site_folder';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
 output: html_document
 ---
 
