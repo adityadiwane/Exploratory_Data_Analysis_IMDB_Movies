@@ -1,5 +1,5 @@
 ---
-title: "Synopsis"
+title: "Exploratory Data Analysis of IMDB Movies Data-set"
 author: "Aditya Diwane"
 date: "10/10/2020"
 knit: (function(input_file, encoding) {
@@ -14,22 +14,18 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+## Synopsis
+1. **Problem Statement**: The goal of this Exploratory Data Analysis is to explore the Kaggle Movies dataset and draw some interesting insights to questions like which countries produce most movies, profitability analysis, kind of movies that are most produced, most produced genres etc.
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+2. **Solution Overview**: After completing the data cleaning, univariate and multi-variate exploration of the data helped us answer some of the above questions. A variety of packages were used for this exercise, which are explained in the later sections. Each analysis has been explained along with its codes.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+3. **Insights**: Some very interesting insights were obtained from this analysis:
 
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+- Drama, Comedy and Thriller are the top genres. The frequency of movies decreases exponentially.
+- US has the most thriving movie industry, and movies are being produced since the early-mid nineties. Japan, Italy, germany and - - - France being only other countries which produced significant number of movies before 1980s.
+- India has significantly higher average movie budget (~100 M$) than other countries (However, average is not robust to outliers)
+- New Zealand tops the average movie revenue (~90 M$), and is significantly higher than the second highest Taiwan.
+- English is the language in which most movies are made.
+- Average movie IMDB Score is 6.4 and 90% of movies have a score between 8.1 and 4.3. IMDB scores follow a bell shaped distribution.
+- Movies with higher IMDB score tend to have higher revenue (as shown in the 3D scatter plot)
+- Significant number of movies go into loss (as shown in the 3D scatter plot)
