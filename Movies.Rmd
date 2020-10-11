@@ -75,7 +75,7 @@ The first part of data cleaning involves removal of spurious characters (Â) fro
 
 Then we remove the duplicates in the data, using then “movie_title” column. Duplicate data will skew our analysis hence needs to be removed.
 
-Third part of data cleaning is the currency columns. The “Budget” and “Gross” (revenue) columns for a few countries were not converted to USD while compiling the data. Hence I have done this manually. This cleaning will help us compare these financial columns across movies and countries.
+Third part of data cleaning is the currency columns. The “Budget” and “Gross” (revenue) columns for a few countries were not converted to USD while compiling the data. Hence I have done this manually. This cleaning will help us compare these financial columns across movies and countries. (Conversion as of 9th Oc)
 
 Lastly I created a profit_flag column, which is 1 if the movie is profitable (Revenue > Budget) and 0 otherwise.
 ```{r warning=FALSE,message=FALSE, fig.align='center', out.height = '120%', out.width = '120%'}
@@ -399,6 +399,18 @@ plot_ly(imdb_country, x = ~profit_2, y = ~avg_score,
 
 ```
 
+### Summary
+
+The above analysis helped us understand the movies dataset better. Now we have answers to some inetersting questions and are in a position to do follow-up and deep dive analysis. The following is the summary of the analysis:
+
+- Drama, Comedy and Thriller are the top genres. As seen in the bar chart and wordcloud
+- US has the most thriving movie industry, and movies are being produced since the early-mid nineties. Japan, Italy, germany and France being only other countries which produced significant number of movies before 1980s.
+- India has significantly higher average movie budget (~100 M$) than other countries (However, average is not robust to outliers). I believe few movies have skewed this result (as seen from the revenue box plot)
+- New Zealand tops the average movie revenue (~90 M$), and is significantly higher than the second highest Taiwan.
+- English is the language in which most movies are made. And USA produces movies in 14 languages, most by any country
+- Average movie IMDB Score is 6.4 and 90% of movies have a score between 8.1 and 4.3. IMDB scores follow a bell shaped distribution. So any movie having a score of more than 8.1 would be one of the top 5% movies in the world.
+- Movies with higher IMDB score tend to have higher revenue (as shown in the 3D scatter plot). Here IMDB score and Revenue might be correlated. People prefer to watch famous and good movies.
+- Significant number of movies go into loss (as shown in the 3D scatter plot)
 
 ```{r warning=FALSE, message=FALSE, fig.align='center', out.height = '120%', out.width = '120%'}
 ```
